@@ -1,0 +1,47 @@
+<div id="workoutFormContainer">
+
+
+<h3 id="heading"><%= @workout.name %></h3>
+
+<ul id="bullets">
+<li id="display">
+<p>Workout Description: <%= @workout.description %></p>
+<p>Workout Instructions: <%= @workout.instructions %></p>
+<p>Workout Time: <%= @workout.workout_time %></p>
+<p>Experience Needed: <%= @workout.experience_needed %></p>
+<p>Equipment Needed: <%= @workout.equipment_needed %></p>
+</li>
+</ul>
+
+
+<% if Helpers.current_user(session) == @workout.user %>
+
+<a href="/workouts/<%=@workout.id%>/edit"><button id="edit">Edit Workout</button></a>
+
+<form action="/workouts/<%=@workout.id%>/delete" method="post">
+<input type="hidden" name="_method" value="delete">
+<input id="delete" type="submit" value="Delete Workout">
+</form>
+
+<% else %>
+
+<form action="/workouts" method="post">
+ <input type="submit" value="Copy Workout">
+  <input type="hidden" name="name" value="<%=@workout.name%>"> <br>
+  <input type="hidden" name="description" value="<%=@workout.description%>"> <br>
+  <input id="instructions" type="hidden" name="instructions" value="<%=@workout.instructions%>">
+  <input type="hidden" name="workout_time" value="<%=@workout.workout_time%>"> <br>
+  
+  <input type="hidden" name="experience_needed" value="<%=@workout.experience_needed%>"> <br>
+ 
+  <input type="hidden" name="equipment_needed" value="<%=@workout.equipment_needed%>"> <br>
+ 
+
+</form>
+
+
+<% end %>
+
+
+
+</div>

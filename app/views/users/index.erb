@@ -1,0 +1,17 @@
+<div id="workoutFormContainer">
+
+
+<h3 id="heading">All Users</h3>
+
+<ul id="bullets">
+<% @users.each do |user|  %>
+<li id="display">
+<p><a id="title" href="/users/<%=user.id%>"> <%= user.username.titleize %>  </a></p>
+<p>Experience Level: <%= user.experience_level %></p>
+<p>Workouts Posted: </p>
+<p>Average Workout Rating: </p>
+</li>
+
+<% end %>
+</ul>
+</div>

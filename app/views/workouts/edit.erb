@@ -1,0 +1,28 @@
+<div id="workoutFormContainer">
+
+
+<h3 id="heading">Edit Workout</h3>
+<h5 id="coralText">* Please make sure to fill out all fields before editing your workout!</h5>
+
+<div class="container">
+<section>
+<form action="/workouts/<%=@workout.id%>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label >Name: </label>
+  <input type="text" name="workout[name]" value="<%=@workout.name%>"> <br>
+  <label > Description: </label>
+  <input type="text" name="workout[description]" value="<%=@workout.description%>"> <br>
+  <label >Instructions: </label> <br>
+  <textarea id="instructions" type="text" name="workout[instructions]"><%=@workout.instructions%></textarea><br>
+  <label >Workout Time: </label>
+  <input type="text" name="workout[workout_time]" value="<%=@workout.workout_time%>"> <br>
+  <label >Experience Needed: </label>
+  <input type="text" name="workout[experience_needed]" value="<%=@workout.experience_needed%>"> <br>
+  <label >Equipment Needed: </label>
+  <input type="text" name="workout[equipment_needed]" value="<%=@workout.equipment_needed%>"> <br>
+  <input type="submit" value="Edit Workout">
+
+</form>
+</section>
+</div>
+</div>

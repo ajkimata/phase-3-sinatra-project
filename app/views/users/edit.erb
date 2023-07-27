@@ -1,0 +1,25 @@
+<div id="workoutFormContainer">
+
+
+<h3 id="heading">Edit Profile</h3>
+
+<div class="container">
+<section>
+<form action="/users/<%=@user.id%>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label >Experience Level </label>
+  <input type="text" name="user[experience_level]" value="<%=@user.experience_level%>"> <br>
+  <label > Age </label>
+  <input type="text" name="user[age]" value="<%=@user.age%>"> <br>
+  <label >Height </label> <br>
+  <input type="text" name="user[height]" value="<%=@user.height%>"><br>
+  <label >Weight </label>
+  <input type="text" name="user[weight]" value="<%=@user.weight%>"> <br>
+  <label >Location </label>
+  <input type="text" name="user[location]" value="<%=@user.location%>"> <br>
+  <input type="submit" value="Update Profile">
+
+</form>
+</section>
+</div>
+</div>
