@@ -1,8 +1,10 @@
+/* Reset default margin and padding for all elements */
 * {
   margin: 0;
   padding: 0;
 }
 
+/* Styling for the body element */
 body {
   background-image: url(../images/workout_background.jpg);
   background-size: cover;
@@ -11,15 +13,17 @@ body {
   width: max-content;
 }
 
+/* Styling for the homePageContainer element */
 #homePageContainer {
   display: flex;
-  height: 100vh;
+  height: fit-content;
   justify-content: space-between;
   flex-direction: row;
   width: auto;
   align-items: center;
 }
 
+/* Styling for the appName element */
 #appName {
   color: coral;
   font-size: 90px;
@@ -28,10 +32,11 @@ body {
   -webkit-text-stroke-color: black;
 }
 
+/* Styling for the homePageForm element */
 #homePageForm {
   background: #212529;
-  height: fit-content;
-  width: 25%;
+  height: 300pt;
+  width: 500pt;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -42,63 +47,73 @@ body {
   opacity: 0.9;
 }
 
+/* Styling for horizontal rule (hr) */
 hr {
   width: 100%;
 }
 
+/* Styling for the logIn and signUp forms */
 #logIn,
 #signUp {
   text-align: center;
 }
 
+/* Styling for input elements */
 input {
   margin-bottom: 0.2rem;
   width: 100%;
 }
 
+/* Styling for the submit button */
 #submit {
   width: 100%;
 }
 
+/* Styling for the logo element */
 #logo {
   color: coral;
   padding-left: 1rem;
 }
 
+/* Styling for the toggle element */
 #toggle {
   width: auto;
 }
+
+/* Styling for the name element */
 #name {
   color: coral;
 }
 
+/* Media query for screen width less than or equal to 765px */
 @media (max-width: 765px) {
   #heading {
     font-size: 20px;
   }
 }
 
+/* Styling for the heading element */
 #heading {
   color: coral;
   text-align: center;
   margin-top: 1.5rem;
 }
 
+/* Styling for the workoutFormContainer element */
 #workoutFormContainer {
   background: #212529;
-  width: 50vw;
-  height: 80vh;
+  width: 600pt;
+  height: fit-content;
   margin-top: 10vh;
   margin-bottom: 10vh;
   border: solid 1px black;
   border-radius: 10%;
   opacity: 0.9;
   position: absolute;
-  max-height: fit-content;
   margin-left: 25vw;
 }
 
-
+/* Media query for screen width less than or equal to 765px */
 @media (max-width: 765px) {
   label {
     color: white;
@@ -107,19 +122,23 @@ input {
   }
 }
 
+/* Styling for label elements */
 label {
   color: white;
 }
 
+/* Styling for the addButton element */
 #addButton {
   margin-top: 1rem;
 }
 
+/* Styling for the instructions element */
 #instructions {
   height: 200px;
   width: 100%;
 }
 
+/* Styling for the display element */
 #display {
   background-color: rgb(241, 241, 244);
   margin-top: 1rem;
@@ -128,25 +147,30 @@ label {
   opacity: 1;
 }
 
+/* Styling for unordered lists (ul) */
 ul {
   list-style: none;
 }
 
+/* Styling for the title element */
 #title {
   font-size: 20px;
   font-weight: bold;
 }
 
+/* Styling for the delete and edit elements */
 #delete,
 #edit {
   width: 100%;
   margin-top: 10px;
 }
 
+/* Styling for the siteIntro element */
 #siteIntro {
   font-size: 18px;
 }
 
+/* Styling for the flashMessage element */
 #flashMessage {
   text-align: center;
   width: 30vw !important;
@@ -155,10 +179,12 @@ ul {
   position: absolute !important;
 }
 
+/* Styling for the navbar element */
 .navbar {
   z-index: 5;
 }
 
+/* Styling for the coralText element */
 #coralText {
   color: coral;
   margin-left: 1rem;
